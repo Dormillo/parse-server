@@ -31,6 +31,5 @@ export default {
   sessionLength: 31536000,
   expireInactiveSessions: true,
   revokeSessionOnPasswordReset: true,
-  schemaCacheTTL: 5000, // in ms
-  userSensitiveFields: ['email']
+  schemaCacheTTL: 5000 // in ms
 }

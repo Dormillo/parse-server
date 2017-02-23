@@ -156,11 +156,6 @@ class ParseServer {
       throw 'When using an explicit database adapter, you must also use an explicit filesAdapter.';
     }
 
-    userSensitiveFields = Array.from(new Set(userSensitiveFields.concat(
-      defaults.userSensitiveFields,
-      userSensitiveFields
-    )));
-
     const loggerControllerAdapter = loadAdapter(loggerAdapter, WinstonLoggerAdapter, { jsonLogs, logsFolder, verbose, logLevel, silent });
     const loggerController = new LoggerController(loggerControllerAdapter, appId);
     logging.setLogger(loggerController);
